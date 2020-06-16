@@ -4,4 +4,4 @@ execute as @e[tag=automata.path.open] at @s run function automata:pathfinder/exp
 
 kill @e[tag=automata.path,scores={automata.path.g=8..}]
 
-execute if entity @e[tag=automata.path.open] run function automata:pathfinder/step
+execute if entity @e[tag=automata.path.open] unless entity @e[tag=automata.path,scores={automata.path.h=0}] run function automata:pathfinder/step
