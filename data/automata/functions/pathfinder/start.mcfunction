@@ -6,5 +6,7 @@ execute store result score #targetZ automata.path.h run data get entity @e[tag=a
 
 scoreboard players set #next automata.path.g 0
 execute align xyz run function automata:pathfinder/place_node
+# set start node to be explored first
+scoreboard players set @e[tag=automata.path,limit=1,sort=nearest] automata.path.p 1
 
 function automata:pathfinder/step
