@@ -7,4 +7,7 @@ execute if entity @e[tag=automata.path.target] run function automata:pathfinder/
 
 tag @e[tag=automata.path.target] remove automata.path.target
 
+# schedule set direction for the next move tick
+scoreboard players set @s automata.move 10
+
 scoreboard players set @s automata.repath 0
